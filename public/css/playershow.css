@@ -1,0 +1,25 @@
+
+.card {
+    margin: 5px;
+    margin-bottom: 20px;
+    background-color: #FCFAEE;
+    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.5    );
+}
+    
+.card{
+    color: #384b70;
+}
+
+
+.card-body {
+    padding: 30px; 
+}
+
+.list-group-item {
+    border: none;
+    background-color: #FCFAEE;
+    color: #384b70;  
+}
+.font-weight-bold {
+    font-weight: bold;
+}

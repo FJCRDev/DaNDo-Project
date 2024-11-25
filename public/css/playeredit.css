@@ -1,0 +1,20 @@
+
+.fixed-bottom-right {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.fixed-bottom-left {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+/* css para que los botones estén donde quiero */
+.container{
+    color: #FCFAEE; 
+}
+input:read-only{
+        background-color: #507687;
+    }

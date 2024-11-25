@@ -1,0 +1,51 @@
+header{
+    background-color: #B8001F;
+}
+/* gran mayoría de colores usados tant oen el header como muchas de las páginas para no repetirme */
+body, h1, span {
+    color: #fcfaee;
+}
+h1 .title{
+color:#fcfaee;
+}
+.logo {
+    color: #384B70;
+}
+.logo .uppercase { 
+    color: #B8001F;
+}
+.me-3{
+    font-weight: bold;
+    color: #384B70;
+}
+#close{
+    color: #B8001F;
+}
+#close:hover{
+    color: #fcfaee;
+}
+.card-columns {
+    column-count: 3;
+}
+/* background generalizado para las vistas */
+body {
+    background-color: #384B70;
+    color: #FCFAEE;
+}
+
+.form-control, .form-select {
+    background-color: #507687;
+    color: #FCFAEE;
+    border: 1px solid #FCFAEE; 
+}
+
+.form-label {
+    color: #FCFAEE;
+}
+
+
+
+.card-body {
+    z-index: 1;
+}
+

@@ -1,0 +1,72 @@
+
+.container {
+  margin-top: 20px;
+}
+h1 {
+  margin-bottom: 20px;
+}
+
+.table {
+  margin-top: 20px;
+  table-layout: fixed;
+  border: none;
+}
+.table th {
+  background-color: #384B70;
+  color: #FCFAEE;
+  border: none;
+}
+.table td {
+  vertical-align: middle;
+  border: none;
+}
+
+img.img-fluid {
+  width: 100%;
+  height: 400px;
+
+  object-fit: cover;
+
+}
+
+.btn-primary, .btn-secondary {
+  width: 150px;
+}
+body, tbody {
+  background-color: #384B70;
+  color: #FCFAEE;
+}
+.logo {
+  color: #FCFAEE;
+}
+.logo .uppercase {
+  color: #B8001F;
+}
+
+
+/* Animación simulando un dado de 6 caras rodando */
+.animation {
+  margin-inline: auto;
+
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+  background-color: #B8001F;
+  -webkit-animation: squareToCircle 2s 1.2s infinite alternate;
+
+}
+  
+@-webkit-keyframes squareToCircle {
+  0% {
+    background: #b8112d;
+    transform: rotate(0deg);
+  }
+  50% {
+    background: #FCFAEE;
+    transform: rotate(90deg);
+  }
+  100% {
+    background: #507687;
+    transform: rotate(180deg);
+  }
+}

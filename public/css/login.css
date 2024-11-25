@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+    /* 80 centrados para asegurarme que está en el centro el login */
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    /* Un poco de espaciado estético para el título de presentación */
+}
+
+form {
+    width: 100%;
+    max-width: 320px;
+    padding: 20px;
+    background-color: #507687;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    /* Sombra para hacer que resalte a la pantalla el login  */
+    
+}
+/* Que los botones y registros ocupen todo de su padre para que sea más estético */
+.input, .btn {
+    width: 100%;
+}
+
+.btn-primary, .btn-secondary {
+    margin-top: 15px;
+}
