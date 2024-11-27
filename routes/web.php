@@ -30,8 +30,11 @@ Route::middleware(['auth'])->group(function () {
         Route::prefix('character-sheets')->name('player.characterSheets.')->group(function () {
             Route::get('/create', [CharacterSheetController::class, 'create'])->name('create');
             Route::post('/store', [CharacterSheetController::class, 'store'])->name('store');
-            Route::get('/character-sheets/{id}', [CharacterSheetController::class, 'show'])->name('player.characterSheets.show');
-            Route::delete('/character-sheets/{characterSheet}', [CharacterSheetController::class, 'destroy'])->name('player.characterSheets.destroy');
+            Route::get('/character-sheets/{id}', [CharacterSheetController::class, 'show'])->name('show');
+            Route::get('/{id}/edit', [CharacterSheetController::class, 'edit'])->name('edit');
+            Route::put('/{id}', [CharacterSheetController::class, 'update'])->name('update');
+
+            Route::delete('/character-sheets/{characterSheet}', [CharacterSheetController::class, 'destroy'])->name('destroy');
 
         });
 
@@ -53,6 +56,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
         Route::delete('/users/{user}', [AdminController::class, 'destroyUser'])->name('destroyUser');
         Route::delete('/sessions/{session}', [AdminController::class, 'destroySession'])->name('destroySession');
+        Route::delete('/character-sheets/{characterSheet}', [AdminController::class, 'destroyCharacterSheet'])->name('destroyCharacterSheet');
     });
 
 

@@ -50,6 +50,41 @@
 </table>
 
 
+<h2>Character Sheets</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre del Personaje</th>
+            <th>Cliente ID</th>
+            <th>Detalles</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach ($charactersSheet as $character)
+        <tr>
+            <td>{{ $character->id }}</td>
+            <td>{{ json_decode($character->valores)->name ?? 'No Name' }}</td>
+            <td>{{ $character->client_id }}</td>
+            <td>
+                <!-- añadiendo al final un valor para eliminar dicho usuario llamando a la funcion de destruir USUARIO. -->
+            <form action="{{ route('admin.destroyCharacterSheet', $user->id) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger">Confirmar</button>
+            </form>
+
+            </td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
+
+
+
+
+
+
 <!-- La misma lógica la copiamos y pegamos para crear las sesiones, aquí especificando las IDs de la sesion y la del DM
     Que la gestiona.
 -->
