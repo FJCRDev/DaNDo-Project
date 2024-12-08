@@ -55,8 +55,8 @@ Route::middleware(['auth'])->group(function () {
     Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
         Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
         Route::delete('/users/{user}', [AdminController::class, 'destroyUser'])->name('destroyUser');
+        Route::delete('/characterSheet/{id}', [AdminController::class, 'destroyCharacterSheet'])->name('destroyCharacterSheet');
         Route::delete('/sessions/{session}', [AdminController::class, 'destroySession'])->name('destroySession');
-        Route::delete('/character-sheets/{characterSheet}', [AdminController::class, 'destroyCharacterSheet'])->name('destroyCharacterSheet');
     });
 
 

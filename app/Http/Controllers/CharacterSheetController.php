@@ -38,11 +38,11 @@ class CharacterSheetController extends Controller
         
         if ($request->hasFile('image')) {
             // Si hay archivo, lo guarda en el directorio de imágenes de personajes y genera la ruta pública.
-            $imagePath = $request->file('image')->store('character_images', 'public');
+            $imagePath = $request->file('image')->store('images/character_images', 'public');
             $imagePublicPath = Storage::url($imagePath);
         } else {
             // Si no hay archivo, asigna la ruta de la imagen predeterminada.
-            $imagePublicPath = '/images/default.png';
+            $imagePublicPath = 'images/default.png';
         }
         //Creamos la estructura de todos los datos para que se almacenen como JSON en la base de datos en el campo "valores"
         $data = [

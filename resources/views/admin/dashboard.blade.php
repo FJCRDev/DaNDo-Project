@@ -57,7 +57,7 @@
             <th>ID</th>
             <th>Nombre del Personaje</th>
             <th>Cliente ID</th>
-            <th>Detalles</th>
+            <th>¿Eliminar ficha?</th>
         </tr>
     </thead>
     <tbody>
@@ -68,11 +68,11 @@
             <td>{{ $character->client_id }}</td>
             <td>
                 <!-- añadiendo al final un valor para eliminar dicho usuario llamando a la funcion de destruir USUARIO. -->
-            <form action="{{ route('admin.destroyCharacterSheet', $user->id) }}" method="POST">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="btn btn-danger">Confirmar</button>
-            </form>
+                <form action="{{ route('admin.destroyCharacterSheet', $character->id) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Confirmar</button>
+                </form>
 
             </td>
         </tr>
@@ -98,7 +98,7 @@
             <th>Fecha</th>
             <th>Hora</th>
 
-            <th>Acciones</th>
+            <th>¿Eliminar sesión?</th>
         </tr>
     </thead>
     <tbody>
@@ -108,7 +108,7 @@
             <td>{{ $session->id }}</td>
             <td>{{ $session->dm_id }}</td> 
             <td>{{ $session->description }}</td>
-            <td>{{ $session->date }}</td>
+            <td>{{ date('d-m-Y', strtotime($session->date)) }}</td>
             <td>{{ $session->time }}</td>
 
             <td>
@@ -116,7 +116,7 @@
                 <form action="{{ route('admin.destroySession', $session->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                    <button type="submit" class="btn btn-danger">Confirmar</button>
                 </form>
             </td>
         </tr>

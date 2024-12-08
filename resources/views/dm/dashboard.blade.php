@@ -31,7 +31,7 @@ Igualmente, para ello, estaría la versión premium!
             <!-- con su descripción -->
             <p class="card-text"><strong>Descripción:</strong> {{ $session->description }}</p>
             <!-- dia y fecha de la misma -->
-            <p class="card-text"><strong>Fecha:</strong> {{ date('Y-m-d', strtotime($session->date)) }} a las {{ $session->time }}</p>
+            <p class="card-text"><strong>Fecha:</strong> {{ date('d-m-Y', strtotime($session->date)) }} a las {{ $session->time }}</p>
 
             <h6>Personajes en la sesión:</h6>
             <!-- Y una lista no ordenada de los personajes, para ello hay que hacer otro foreach dentro del mismo

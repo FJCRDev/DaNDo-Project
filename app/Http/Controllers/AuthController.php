@@ -66,6 +66,8 @@ class AuthController extends Controller
                 // es el rol que no puede alterar al resto ergo el más seguro.)
                 return redirect()->route('player.dashboard');
             }
+        }else{
+            return view('auth.login');
         }
     }
 

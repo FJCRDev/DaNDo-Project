@@ -117,7 +117,8 @@
                         @endphp
                         @foreach ($sheet->sessions as $session)
                         <li class="list-group-item">
-                            Personaje: {{ $characterData['name'] }} | Fecha y hora: {{ date('Y-m-d', strtotime($session->date)) }} a las {{ $session->time }}
+                            Sesion: {{ $session->title }}<br>
+                            Personaje: {{ $characterData['name'] }} |<br> Fecha y hora: {{ date('d-m-Y', strtotime($session->date)) }} a las {{ $session->time }}
                         </li>
                         @endforeach
                     @endforeach

@@ -37,10 +37,9 @@ class AdminController extends Controller
 
     public function destroyCharacterSheet($id)
     {
-        $user = CharacterSheet::findOrFail($id);
-        $user->delete();
+        $character = CharacterSheet::findOrFail($id);
+        $character->delete();
 
         return redirect()->route('admin.dashboard');
     }
-
 }

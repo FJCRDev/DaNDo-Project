@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
         attributes.forEach(attr => {
             const value = parseInt(document.getElementById(attr).value);
             document.getElementById(`${attr}-bonus`).textContent = `Bonificador: ${calculateBonus(value)}`;
-            document.getElementById(`${attr}-error`).textContent = isNaN(value) || value < 1 || value > 20 ? 'El valor debe estar entre 1 y 20.' : '';
+            document.getElementById(`${attr}-error`).textContent = isNaN(value) || value < 8 || value > 20 ? 'El valor debe estar entre 8 y 20.' : '';
         });
     };
 
